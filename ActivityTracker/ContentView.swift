@@ -7,18 +7,52 @@
 
 import SwiftUI
 
+struct Activity: Identifiable {
+    var id = UUID()
+    let title: String
+    let description: String
+    var hours: Double
+}
+
+/*
+@Observable
+class Activities {
+    var items = [Activity]()
+}
+*/
+
+@Observable
+class Activities {
+    var items = [Activity(title: "Walking", description: "Walking the dog", hours: 1.0)]
+}
+
+
 struct ContentView: View {
+    @State private var activities = Activities()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(activities.items) {activity in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(activity.title)
+                                    .font(.headline)
+                                Text(activity.description)
+                            }
+                            Spacer()
+                            Text("\(activity.hours, specifier: "%.1f") hours")
+                        }
+                        .padding()
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
+
     ContentView()
 }
