@@ -14,13 +14,6 @@ struct Activity: Identifiable {
     var hours: Double
 }
 
-/*
-@Observable
-class Activities {
-    var items = [Activity]()
-}
-*/
-
 @Observable
 class Activities {
     var items = [Activity(title: "Walking", description: "Walking the dog", hours: 1.0)]
@@ -48,6 +41,10 @@ struct ContentView: View {
                     }
                 }
             }
+            NavigationLink("Add New Activity") {
+                AddActivityView(activities: activities)
+            }
+            .navigationTitle("Activity Tracker")
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFDCB1FF2B7B673B0027CBDD /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCB1FE2B7B673B0027CBDD /* AddActivityView.swift */; };
 		EFFDBDAD2B795B9600734D05 /* ActivityTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBDAC2B795B9600734D05 /* ActivityTrackerApp.swift */; };
 		EFFDBDAF2B795B9600734D05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBDAE2B795B9600734D05 /* ContentView.swift */; };
 		EFFDBDB12B795B9800734D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFDBDB02B795B9800734D05 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EFDCB1FE2B7B673B0027CBDD /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
 		EFFDBDA92B795B9600734D05 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFDBDAC2B795B9600734D05 /* ActivityTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTrackerApp.swift; sourceTree = "<group>"; };
 		EFFDBDAE2B795B9600734D05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				EFFDBDAC2B795B9600734D05 /* ActivityTrackerApp.swift */,
 				EFFDBDAE2B795B9600734D05 /* ContentView.swift */,
+				EFDCB1FE2B7B673B0027CBDD /* AddActivityView.swift */,
 				EFFDBDB02B795B9800734D05 /* Assets.xcassets */,
 				EFFDBDB22B795B9800734D05 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFDCB1FF2B7B673B0027CBDD /* AddActivityView.swift in Sources */,
 				EFFDBDAF2B795B9600734D05 /* ContentView.swift in Sources */,
 				EFFDBDAD2B795B9600734D05 /* ActivityTrackerApp.swift in Sources */,
 			);
