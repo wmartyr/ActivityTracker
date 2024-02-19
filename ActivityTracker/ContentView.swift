@@ -11,7 +11,7 @@ struct Activity: Identifiable, Codable {
     var id = UUID()
     let title: String
     let description: String
-    var hours: Double
+    var minutes: Int
 }
 
 @Observable
@@ -52,7 +52,7 @@ struct ContentView: View {
                                 Text(activity.description)
                             }
                             Spacer()
-                            Text("\(activity.hours, specifier: "%.1f") hours")
+                            Text("\(activity.minutes) minutes")
                         }
                         .padding()
                     }

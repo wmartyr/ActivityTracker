@@ -11,7 +11,7 @@ struct AddActivityView: View {
     @Environment(\.dismiss) var dismiss
     @State private var title = "Activity Title"
     @State private var description = "Activity Description"
-    @State private var hours = 0.0
+    @State private var minutes = 0
     
     
     var activities: Activities
@@ -25,15 +25,15 @@ struct AddActivityView: View {
                 Section("Description") {
                     TextField("Description", text: $description)
                 }
-                Section("Hours") {
-                    TextField("Hours", value: $hours, format: .number)
+                Section("Minutes") {
+                    TextField("Minutes", value: $minutes, format: .number)
                 }
             }
             .navigationTitle("Add Activity")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Save") {
-                        let activity = Activity(title: title, description: description, hours: hours)
+                        let activity = Activity(title: title, description: description, minutes: minutes)
                         activities.items.append(activity)
                         dismiss()
                     }
