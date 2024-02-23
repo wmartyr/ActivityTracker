@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EFDCB1FF2B7B673B0027CBDD /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCB1FE2B7B673B0027CBDD /* AddActivityView.swift */; };
+		EFFBA8E52B83E7D800323AB2 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFBA8E42B83E7D800323AB2 /* ActivityDetailView.swift */; };
 		EFFDBDAD2B795B9600734D05 /* ActivityTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBDAC2B795B9600734D05 /* ActivityTrackerApp.swift */; };
 		EFFDBDAF2B795B9600734D05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDBDAE2B795B9600734D05 /* ContentView.swift */; };
 		EFFDBDB12B795B9800734D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFDBDB02B795B9800734D05 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		EFDCB1FE2B7B673B0027CBDD /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
+		EFFBA8E42B83E7D800323AB2 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 		EFFDBDA92B795B9600734D05 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFDBDAC2B795B9600734D05 /* ActivityTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTrackerApp.swift; sourceTree = "<group>"; };
 		EFFDBDAE2B795B9600734D05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				EFFDBDAC2B795B9600734D05 /* ActivityTrackerApp.swift */,
 				EFFDBDAE2B795B9600734D05 /* ContentView.swift */,
 				EFDCB1FE2B7B673B0027CBDD /* AddActivityView.swift */,
+				EFFBA8E42B83E7D800323AB2 /* ActivityDetailView.swift */,
 				EFFDBDB02B795B9800734D05 /* Assets.xcassets */,
 				EFFDBDB22B795B9800734D05 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				EFDCB1FF2B7B673B0027CBDD /* AddActivityView.swift in Sources */,
 				EFFDBDAF2B795B9600734D05 /* ContentView.swift in Sources */,
+				EFFBA8E52B83E7D800323AB2 /* ActivityDetailView.swift in Sources */,
 				EFFDBDAD2B795B9600734D05 /* ActivityTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

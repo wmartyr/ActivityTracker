@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct Activity: Identifiable, Codable {
+struct Activity: Identifiable, Codable, Hashable, Equatable {
     var id = UUID()
     let title: String
     let description: String
     var minutes: Int
+    var completionCount: Int
 }
 
 @Observable
 class Activities {
-    //var items = [Activity(title: "Walking", description: "Walking the dog", hours: 1.0)]
     var items = [Activity]() {
         didSet {
             if let encoded = try? JSONEncoder().encode(items) {
@@ -42,21 +42,25 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVStack {
+            List {
                     ForEach(activities.items) {activity in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(activity.title)
-                                    .font(.headline)
-                                Text(activity.description)
+                        NavigationLink(value: activity) {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(activity.title)
+                                        .font(.headline)
+                                    Text(activity.description)
+                                }
+                                Spacer()
+                                Text("\(activity.minutes) minutes")
                             }
-                            Spacer()
-                            Text("\(activity.minutes) minutes")
+                            .padding()
                         }
-                        .padding()
+                        .navigationDestination(for: Activity.self) {selection in
+                            ActivityDetailView(activity: selection, activities: activities)
+                        }
                     }
-                }
+                    .onDelete(perform: removeActivities)
             }
             NavigationLink("Add New Activity") {
                 AddActivityView(activities: activities)
@@ -64,9 +68,12 @@ struct ContentView: View {
             .navigationTitle("Activity Tracker")
         }
     }
+    
+    func removeActivities(at offsets: IndexSet) {
+        activities.items.remove(atOffsets: offsets)
+    }
 }
 
 #Preview {
-
     ContentView()
 }

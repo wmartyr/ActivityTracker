@@ -12,6 +12,7 @@ struct AddActivityView: View {
     @State private var title = "Activity Title"
     @State private var description = "Activity Description"
     @State private var minutes = 0
+    @State private var completionCount = 1
     
     
     var activities: Activities
@@ -33,7 +34,7 @@ struct AddActivityView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Save") {
-                        let activity = Activity(title: title, description: description, minutes: minutes)
+                        let activity = Activity(title: title, description: description, minutes: minutes, completionCount: completionCount)
                         activities.items.append(activity)
                         dismiss()
                     }
