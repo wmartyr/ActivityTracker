@@ -14,17 +14,39 @@ struct ActivityDetailView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Text(activity.title)
+                .font(.largeTitle)
+                .bold()
+                .padding()
             Text(activity.description)
+                .font(.title2)
             Text("\(activity.minutes) minutes")
-            Text(String(activity.completionCount))
+                .font(.title3)
+            Text(showCountMessage(count: activity.completionCount))
+                .font(.title3)
             Button("Increment") {
                 let newActivity = Activity(title: activity.title, description: activity.description, minutes: activity.minutes, completionCount: activity.completionCount + 1)
                 let index = activities.items.firstIndex(of: activity)
                 activities.items[index!] = newActivity
                 dismiss()
             }
+            .font(.title2)
+            .bold()
+            .padding()
+            .background(.black)
+            .foregroundColor(.white)
+            .clipShape(.rect(cornerRadius: 10))
+            Spacer()
+            Spacer()
         }
+    }
+    
+    func showCountMessage(count: Int) -> String {
+        if count == 1 {
+            return "Completed 1 time"
+        }
+        return "Completed \(count) times"
     }
 }
 
